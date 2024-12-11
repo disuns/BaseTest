@@ -42,11 +42,11 @@ class ApiModule {
             .build()
     }
 
-    /*@Singleton
+    @Singleton
     @CoinServiceRetroif
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient) =
-        createRetrofit(okHttpClient, API)*/
+        createRetrofit(okHttpClient, "https://apis.data.go.kr/")
 
     @Singleton
     @Provides

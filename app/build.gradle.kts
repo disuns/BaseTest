@@ -56,4 +56,6 @@ dependencies {
     implementation(libs.logger)
     implementation(libs.hilt)
     implementation(libs.bundles.networking)
+
+    implementation(libs.bundles.navigator)
 }
