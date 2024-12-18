@@ -1,6 +1,6 @@
-package com.test.base.network
+package com.test.base.module
 
-import com.test.base.network.service.CoinService
+import com.test.data.network.service.CoinService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

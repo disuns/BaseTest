@@ -1,22 +1,19 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt)
     kotlin("kapt")
 }
 
 android {
-    namespace = "com.test.base"
+    namespace = "com.test.data"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.test.base"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -35,9 +32,6 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    viewBinding {
-        enable = true
-    }
 }
 
 dependencies {
@@ -45,19 +39,13 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    kapt(libs.hilt.compiler)
-
-    implementation(libs.logger)
-    implementation(libs.hilt)
-    implementation(libs.bundles.networking)
-
-    implementation(libs.bundles.navigator)
-
     implementation(project(":domain"))
+
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+    implementation(libs.bundles.networking)
 }
