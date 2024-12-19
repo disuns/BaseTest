@@ -1,4 +1,4 @@
-package com.test.base.module
+package com.test.data.module
 
 import com.test.data.network.service.CoinService
 import dagger.Module

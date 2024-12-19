@@ -47,6 +47,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(project(":domain"))
+    implementation(project(":common"))
 
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)

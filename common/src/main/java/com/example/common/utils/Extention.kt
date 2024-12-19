@@ -1,4 +1,4 @@
-package com.test.base.utils
+package com.example.common.utils
 
 import com.orhanobut.logger.Logger
 

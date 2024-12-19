@@ -1,4 +1,4 @@
-package com.test.base.model
+package com.example.presentation.model
 
 data class CoinModel(
     val id : Int

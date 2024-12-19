@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import com.example.common.utils.logMessage
 import com.test.base.R
 import com.test.base.databinding.FragmentMainBinding
-import com.test.base.utils.logMessage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
