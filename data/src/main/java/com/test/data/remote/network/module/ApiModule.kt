@@ -1,6 +1,6 @@
-package com.test.data.module
+package com.test.data.remote.network.module
 
-import com.test.data.network.service.CoinService
+import com.test.data.remote.network.service.CoinService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

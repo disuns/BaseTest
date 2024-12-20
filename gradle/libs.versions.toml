@@ -17,6 +17,7 @@ okhttp = "4.12.0"
 logger= "2.2.0"
 navigator = "2.8.4"
 jetbrainsKotlinJvm = "1.9.24"
+room = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,6 +43,10 @@ logger = { module = "com.orhanobut:logger", version.ref = "logger"}
 #navigator
 navigator_fragment_ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigator" }
 navigator_ui_ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigator" }
+#room
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room"}
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room"}
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

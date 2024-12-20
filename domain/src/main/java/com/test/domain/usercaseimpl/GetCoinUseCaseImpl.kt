@@ -5,7 +5,7 @@ import com.test.domain.repository.CoinRepository
 import com.test.domain.usecase.GetCoinUseCase
 
 class GetCoinUseCaseImpl(private val coinRepository: CoinRepository) : GetCoinUseCase {
-    override suspend fun invoke():List<Coin> {
+    override suspend fun invoke():Coin {
         return coinRepository.fetchCoin()
     }
 }

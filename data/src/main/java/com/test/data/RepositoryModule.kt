@@ -1,4 +1,4 @@
-package com.test.data.module
+package com.test.data
 
 import com.test.data.implementation.CoinRepositoryImpl
 import com.test.domain.repository.CoinRepository

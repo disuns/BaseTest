@@ -1,4 +1,4 @@
-package com.test.data.network
+package com.test.data.remote.network
 
 import com.test.base.utils.logMessage
 import kotlinx.coroutines.flow.Flow
