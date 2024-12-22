@@ -1,9 +1,9 @@
 package com.test.data
 
-import com.test.data.implementation.CoinRepositoryImpl
-import com.test.domain.repository.CoinRepository
+import com.test.data.implementations.CoinRepositoryImpl
+import com.test.domain.repositories.CoinRepository
 import com.test.domain.usecase.GetCoinUseCase
-import com.test.domain.usercaseimpl.GetCoinUseCaseImpl
+import com.test.domain.usecaseimpl.GetCoinUseCaseImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

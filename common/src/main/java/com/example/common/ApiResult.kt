@@ -1,6 +1,6 @@
-package com.test.data.remote.network
+package com.example.common
 
-import com.test.base.utils.logMessage
+import com.example.common.utils.logMessage
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException

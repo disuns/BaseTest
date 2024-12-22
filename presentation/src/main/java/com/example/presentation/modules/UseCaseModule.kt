@@ -1,13 +1,11 @@
-package com.example.presentation.module
+package com.example.presentation.modules
 
-import com.test.domain.repository.CoinRepository
-import com.test.domain.usercaseimpl.GetCoinUseCaseImpl
+import com.test.domain.repositories.CoinRepository
+import com.test.domain.usecaseimpl.GetCoinUseCaseImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Inject
 
 @Module
 @InstallIn(ViewModelComponent::class)

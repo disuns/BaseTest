@@ -1,11 +1,11 @@
-package com.test.domain.usercaseimpl
+package com.test.domain.usecaseimpl
 
-import com.test.domain.model.Coin
-import com.test.domain.repository.CoinRepository
+import com.test.domain.models.CoinDomainModel
+import com.test.domain.repositories.CoinRepository
 import com.test.domain.usecase.GetCoinUseCase
 
 class GetCoinUseCaseImpl(private val coinRepository: CoinRepository) : GetCoinUseCase {
-    override suspend fun invoke():Coin {
+    override suspend fun invoke():CoinDomainModel {
         return coinRepository.fetchCoin()
     }
 }
