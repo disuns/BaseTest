@@ -9,9 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 abstract class BaseFragment<VB : ViewBinding, VM: ViewModel>(
     private val inflateBinding : (LayoutInflater, ViewGroup?, Boolean) -> VB
 ) : Fragment() {

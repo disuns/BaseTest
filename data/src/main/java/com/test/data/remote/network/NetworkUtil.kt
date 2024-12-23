@@ -1,18 +1,29 @@
-package com.example.common
+package com.test.data.remote.network
 
 import com.example.common.utils.logMessage
+import com.test.domain.ApiResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import retrofit2.Response
 import java.io.IOException
 
-sealed class ApiResult<out T> {
-    data class Success<out T>(val value: T): ApiResult<T>()
-    object Loading : ApiResult<Nothing>()
-    object Empty: ApiResult<Nothing>()
-    data class Error(val code : Int? = null, val exception : Throwable? = null): ApiResult<Nothing>()
-}
+//suspend fun <T> safeApiResult(apiFunc: suspend () -> Response<T>) = try {
+//    val response = apiFunc()
+//    if (response.isSuccessful) {
+//        response.body()?.let {
+//            ApiResult.Success(it)
+//        } ?: ApiResult.Empty
+//    } else {
+//        ApiResult.Error(code = response.code(), exception = HttpException(response))
+//    }
+//} catch (e: IOException) {
+//    ApiResult.Error(exception = e)
+//} catch (e: Exception) {
+//    ApiResult.Error(exception = e)
+//}
+
+
 
 fun <T> safeFlow(apiFunc: suspend () -> Response<T>): Flow<ApiResult<T>> = flow{
     emit(ApiResult.Loading)

@@ -15,5 +15,5 @@ kotlin {
 }
 
 dependencies {
-    implementation(project(":common"))
+    implementation(libs.kotlinx.coroutines.core)
 }

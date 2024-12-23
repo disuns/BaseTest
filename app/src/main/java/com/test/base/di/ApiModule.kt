@@ -1,4 +1,4 @@
-package com.test.data.remote.network.module
+package com.test.base.di
 
 import com.test.data.remote.network.service.CoinService
 import dagger.Module
