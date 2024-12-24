@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt)
-    kotlin("kapt")
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -51,11 +51,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
     implementation(libs.hilt)
     implementation(libs.bundles.networking)
 
     implementation(libs.bundles.navigator)
+
+    implementation(libs.bundles.room)
+    ksp(libs.androidx.room.compiler)
 
     implementation(project(":data"))
     implementation(project(":presentation"))
