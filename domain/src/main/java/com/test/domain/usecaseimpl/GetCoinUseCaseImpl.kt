@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 
 class GetCoinUseCaseImpl(
     private val coinRepository: CoinRepository) : GetCoinUseCase {
-    override suspend fun invoke(): Flow<ApiResult<CoinDomainModel>> {
+    override fun invoke(): Flow<ApiResult<CoinDomainModel>> {
         return coinRepository.fetchCoin()
     }
 }

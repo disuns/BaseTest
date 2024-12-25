@@ -14,7 +14,7 @@ class CoinRepositoryImpl @Inject constructor(
     private val remoteDataSource: RemoteDataSource,
     private val mapper: CoinDataMapper
 ) : CoinRepository {
-    override suspend fun fetchCoin(): Flow<ApiResult<CoinDomainModel>> {
+    override fun fetchCoin(): Flow<ApiResult<CoinDomainModel>> {
         return mapper.responseToDomainCoin(remoteDataSource.fetchCoin(1))
     }
 

@@ -8,11 +8,11 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 interface RemoteDataSource {
-    suspend fun fetchCoin(id:Int) : Flow<ApiResult<CoinResponse>>
+    fun fetchCoin(id:Int) : Flow<ApiResult<CoinResponse>>
 }
 
 class RemoteDataSourceImpl @Inject constructor(
     private val coinService: CoinService
 ) : RemoteDataSource{
-    override suspend fun fetchCoin(id: Int) = safeFlow { coinService.getCoin() }
+    override fun fetchCoin(id: Int) = safeFlow { coinService.getCoin() }
 }

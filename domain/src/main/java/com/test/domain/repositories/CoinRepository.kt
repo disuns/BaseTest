@@ -5,6 +5,6 @@ import com.test.domain.models.CoinDomainModel
 import kotlinx.coroutines.flow.Flow
 
 interface CoinRepository {
-    suspend fun fetchCoin() : Flow<ApiResult<CoinDomainModel>>
+    fun fetchCoin() : Flow<ApiResult<CoinDomainModel>>
     suspend fun localCoin() : CoinDomainModel
 }
