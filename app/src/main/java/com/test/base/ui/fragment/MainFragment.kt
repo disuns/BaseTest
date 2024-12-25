@@ -12,7 +12,6 @@ class MainFragment : BaseFragment<FragmentMainBinding, CoinViewModel>(FragmentMa
 
     override fun setupView() {
         bind {
-            viewModel.fetchCoin()
         }
     }
 }

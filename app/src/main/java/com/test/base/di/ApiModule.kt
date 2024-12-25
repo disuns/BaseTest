@@ -1,5 +1,6 @@
 package com.test.base.di
 
+import com.test.base.BuildConfig
 import com.test.data.remote.network.service.CoinService
 import dagger.Module
 import dagger.Provides
@@ -29,7 +30,11 @@ class ApiModule {
 
     private fun provideLoggingInterceptor(): HttpLoggingInterceptor {
         val interceptor = HttpLoggingInterceptor ()
-        interceptor.level = HttpLoggingInterceptor.Level.BODY
+        if (BuildConfig.DEBUG) {
+            interceptor.level = HttpLoggingInterceptor.Level.BODY
+        } else {
+            interceptor.level = HttpLoggingInterceptor.Level.NONE
+        }
 
         return interceptor
     }
