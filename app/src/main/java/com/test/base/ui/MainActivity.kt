@@ -9,7 +9,6 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.test.base.R
 import com.test.base.databinding.ActivityMainBinding
-import com.test.base.utils.logMessage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

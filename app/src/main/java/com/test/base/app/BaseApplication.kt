@@ -1,22 +1,17 @@
 package com.test.base.app
 
 import android.app.Application
-import com.orhanobut.logger.AndroidLogAdapter
-import com.orhanobut.logger.FormatStrategy
-import com.orhanobut.logger.Logger
-import com.orhanobut.logger.PrettyFormatStrategy
+import com.example.common.LoggerInitializer
 import dagger.hilt.android.HiltAndroidApp
+import javax.inject.Inject
 
 @HiltAndroidApp
 class BaseApplication :Application(){
+
+    @Inject
+    lateinit var loggerInitializer: LoggerInitializer
+
     override fun onCreate() {
         super.onCreate()
-        val formatStrategy: FormatStrategy = PrettyFormatStrategy.newBuilder()
-            .showThreadInfo(false)
-            .methodCount(5)
-            .tag("My App")
-            .build()
-
-        Logger.addLogAdapter(AndroidLogAdapter(formatStrategy))
     }
 }

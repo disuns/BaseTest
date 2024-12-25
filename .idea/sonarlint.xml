@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SonarLintProjectSettings">
+    <option name="moduleMapping">
+      <map>
+        <entry key="Base.presentation" value="Base.Presentation" />
+        <entry key="Base.presentation.androidTest" value="Base.Presentation.androidTest" />
+        <entry key="Base.presentation.main" value="Base.Presentation.main" />
+        <entry key="Base.presentation.unitTest" value="Base.Presentation.unitTest" />
+      </map>
+    </option>
+  </component>
+</project>
