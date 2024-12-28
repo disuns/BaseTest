@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.findNavController
 import com.test.base.R
 import com.test.base.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -15,10 +15,8 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    private val navController : NavController by lazy {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.container)
-            ?: throw IllegalStateException("NavController Missing")
-        navHostFragment.findNavController()
+    private val navController: NavController by lazy {
+        findNavController(R.id.container)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
