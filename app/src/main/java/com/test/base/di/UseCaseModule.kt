@@ -1,19 +1,24 @@
 package com.test.base.di
 
+import com.test.domain.repositories.CoinRepository
 import com.test.domain.usecase.GetCoinUseCase
 import com.test.domain.usecaseimpl.GetCoinUseCaseImpl
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
+import dagger.hilt.components.SingletonComponent
 
 @Module
-@InstallIn(ViewModelComponent::class)
+@InstallIn(SingletonComponent::class)
 abstract class UseCaseModule {
-    @Binds
-    @ViewModelScoped
-    abstract fun bindGetCoinUseCase(
-        impl: GetCoinUseCaseImpl
-    ): GetCoinUseCase
+
+    @Provides
+    fun provideGetCoinUseCase(
+        repository: CoinRepository
+    ): GetCoinUseCase{
+        return GetCoinUseCaseImpl(repository)
+    }
 }
